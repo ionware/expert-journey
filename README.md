@@ -16,7 +16,7 @@ This is a NodeJS application meant to serve as a REST API for a SAAS project, yo
 - Login
 - User Information
 
-#### Inventory Items
+#### Inventory
 - Create item
 - Update item
 - List items
