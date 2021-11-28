@@ -1,0 +1,66 @@
+{
+  "name": "inventory-manager",
+  "version": "0.0.0",
+  "description": "A REST endpoint that allow companies to manage their inventories.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix \"src/**/*.+(js|jsx)\"",
+    "format": "prettier --write \"src/**/*.+(js|jsx|json|yml|yaml|md)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionware/expert-journey.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "JWT",
+    "API",
+    "REST",
+    "MongoDB"
+  ],
+  "author": "Adedeji Stephen <ionware>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ionware/expert-journey/issues"
+  },
+  "homepage": "https://github.com/ionware/expert-journey#readme",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.0"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@configs": "./src/configs",
+    "@controllers": "./src/controllers",
+    "@services": "./src/services",
+    "@utils": "./src/utils",
+    "@routes": "./src/routes",
+    "@db": "./src/db"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.+(js|json|yml|yaml|md)": [
+      "prettier --write"
+    ],
+    "src/**/*.+(js)": [
+      "eslint --fix --quiet"
+    ]
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  }
+}

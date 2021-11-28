@@ -1,0 +1,30 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": false
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "browser": false
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@root", "."],
+          ["@configs", "./src/configs"],
+          ["@controllers", "./src/controllers"],
+          ["@services", "./src/services"],
+          ["@utils", "./src/utils"],
+          ["@routes", "./src/routes"],
+          ["@db", "./src/db"]
+        ],
+        "extensions": [".ts", ".js", ".json"]
+      }
+    }
+  }
+}
