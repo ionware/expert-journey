@@ -15,7 +15,7 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@root", "."],
+          ["@root", "./src"],
           ["@configs", "./src/configs"],
           ["@controllers", "./src/controllers"],
           ["@services", "./src/services"],
