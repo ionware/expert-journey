@@ -24,10 +24,11 @@ Object.entries(routeList).forEach(([namespace, router]) =>
   app.use(`/${namespace}`, router)
 );
 
-app.use((err, req, res, next) => {
-  return res.status(err.statusCode || 500).json({
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) =>
+  res.status(err.statusCode || 500).json({
     message: err.message || 'Internal Server Error',
-  });
-});
+  })
+);
 
 module.exports = app;

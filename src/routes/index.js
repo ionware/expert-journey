@@ -1,4 +1,5 @@
 const authRoutes = require('@routes/auth.route');
+const profileRoutes = require('@routes/profile.route');
 
 /**
  * We will just map the routes resource with their respective
@@ -7,4 +8,5 @@ const authRoutes = require('@routes/auth.route');
  */
 module.exports = {
   auth: authRoutes,
+  profile: profileRoutes,
 };

@@ -24,6 +24,7 @@
           ["@root", "./src"],
           ["@models", "./src/models"],
           ["@requests", "./src/requests"],
+          ["@middlewares", "./src/middlewares"],
           ["@configs", "./src/configs"],
           ["@controllers", "./src/controllers"],
           ["@services", "./src/services"],

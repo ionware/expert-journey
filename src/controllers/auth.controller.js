@@ -28,6 +28,7 @@ const create = routeWrapper(async (req, res) => {
     token: JWT.sign({ id: user.id, email: user.email, name: user.name }),
     email: user.email,
     name: user.name,
+    id: user.id,
   });
 });
 
@@ -39,9 +40,11 @@ const store = routeWrapper(async (req, res) => {
   try {
     user = await createUser({
       ...req.body,
+      // hash the password
       password: Hash.make(req.body.password),
     });
   } catch (error) {
+    // check for mongoDB specific unique error (email:unique)
     if (error.name === 'MongoServerError' && error.code === 11000)
       return res.status(400).json({
         errors: [{ details: 'Email already exists' }],

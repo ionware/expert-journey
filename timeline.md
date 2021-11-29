@@ -6,8 +6,8 @@
 - [x] Model definition
 - [x] App depedencies
 - [ ] Test suite setup
-- [ ] User authentication
-- [ ] Account information
+- [x] User authentication
+- [x] Account information
 - Inventory
   - [ ] Create endpoint
   - [ ] List all and by ID endpoint

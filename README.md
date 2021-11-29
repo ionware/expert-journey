@@ -13,8 +13,8 @@ This is a NodeJS application meant to serve as a REST API for a SAAS project, yo
 
 #### User
 - [x] Sign up
-- [ ] Login
-- [ ] User Information
+- [x] Login
+- [x] User Information
 
 #### Inventory
 - [ ] Create item
