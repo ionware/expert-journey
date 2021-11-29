@@ -4,7 +4,7 @@
 - [x] Setup Express application
 - [x] Database setup
 - [x] Model definition
-- [ ] App depedencies
+- [x] App depedencies
 - [ ] Test suite setup
 - [ ] User authentication
 - [ ] Account information

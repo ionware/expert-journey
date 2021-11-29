@@ -1,14 +1,13 @@
 const router = require('express').Router();
+const { create, store } = require('@controllers/auth.controller');
 
 /**
  * This file is responsible for handling all the routes related to authentication
  * of users of the application.
  */
 
-router.get('/login', (req, res) =>
-  res.json({
-    message: 'Welcome to the authentication route.',
-  })
-);
+router.post('/login', create);
+
+router.post('/register', store);
 
 module.exports = router;

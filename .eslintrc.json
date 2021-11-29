@@ -1,4 +1,7 @@
 {
+  "rules": {
+    "no-shadow": "off"
+  },
   "extends": ["airbnb-base", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
@@ -17,6 +20,7 @@
         "map": [
           ["@root", "./src"],
           ["@models", "./src/models"],
+          ["@requests", "./src/requests"],
           ["@configs", "./src/configs"],
           ["@controllers", "./src/controllers"],
           ["@services", "./src/services"],
