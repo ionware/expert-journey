@@ -12,13 +12,13 @@ This is a NodeJS application meant to serve as a REST API for a SAAS project, yo
 ## Endpoints
 
 #### User
-- Sign up
-- Login
-- User Information
+- [ ] Sign up
+- [ ] Login
+- [ ] User Information
 
 #### Inventory
-- Create item
-- Update item
-- List items
-- Find item
-- Delete item
+- [ ] Create item
+- [ ] Update item
+- [ ] List items
+- [ ] Find item
+- [ ] Delete item
