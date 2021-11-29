@@ -6,7 +6,7 @@ const app = require('@root/app');
 
 const server = http.createServer(app);
 
-const port = process.env.APP_PORT || 3000;
+const port = process.env.PORT || process.env.APP_PORT || 3000;
 const host = process.env.APP_URL || 'http://localhost';
 const inProduction = process.env.NODE_ENV === 'production';
 
