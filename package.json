@@ -11,6 +11,9 @@
     "lint": "eslint --fix \"src/**/*.+(js|jsx)\"",
     "format": "prettier --write \"src/**/*.+(js|jsx|json|yml|yaml|md)\""
   },
+  "engines": {
+    "node": "14"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ionware/expert-journey.git"
