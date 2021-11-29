@@ -2,8 +2,8 @@
 
 - [x] Project init
 - [x] Setup Express application
-- [ ] Database setup
-- [ ] Model definition
+- [x] Database setup
+- [x] Model definition
 - [ ] App depedencies
 - [ ] Test suite setup
 - [ ] User authentication

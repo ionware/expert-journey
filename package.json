@@ -42,6 +42,7 @@
   },
   "_moduleAliases": {
     "@root": "./src",
+    "@models": "./src/models",
     "@configs": "./src/configs",
     "@controllers": "./src/controllers",
     "@services": "./src/services",
@@ -68,6 +69,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "module-alias": "^2.2.2"
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.0.13"
   }
 }

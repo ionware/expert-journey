@@ -4,6 +4,9 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const routeList = require('@routes');
 
+// register all database model.
+require('@models');
+
 const app = express(); // intialize express app.
 
 // setup middlewares.

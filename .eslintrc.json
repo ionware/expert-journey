@@ -16,6 +16,7 @@
       "alias": {
         "map": [
           ["@root", "./src"],
+          ["@models", "./src/models"],
           ["@configs", "./src/configs"],
           ["@controllers", "./src/controllers"],
           ["@services", "./src/services"],
