@@ -13,7 +13,7 @@ const inProduction = process.env.NODE_ENV === 'production';
 const startApp = () =>
   server.listen(port, () => {
     // eslint-disable-next-line no-console
-    if (!inProduction) console.log(`Server started on  ${host}:${port}`);
+    console.log(`Server started on  ${host}:${port}`);
   });
 
 // establish databasr connection and init app
