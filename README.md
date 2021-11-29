@@ -12,7 +12,7 @@ This is a NodeJS application meant to serve as a REST API for a SAAS project, yo
 ## Endpoints
 
 #### User
-- [ ] Sign up
+- [x] Sign up
 - [ ] Login
 - [ ] User Information
 

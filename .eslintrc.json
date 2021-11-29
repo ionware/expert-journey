@@ -1,6 +1,9 @@
 {
   "rules": {
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "new-cap": "off",
+    "no-return-await": "off",
+    "class-methods-use-this": "off"
   },
   "extends": ["airbnb-base", "prettier"],
   "parserOptions": {
