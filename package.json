@@ -46,6 +46,7 @@
     "@requests": "./src/requests",
     "@middlewares": "./src/middlewares",
     "@configs": "./src/configs",
+    "@resources": "./src/resources",
     "@controllers": "./src/controllers",
     "@services": "./src/services",
     "@utils": "./src/utils",

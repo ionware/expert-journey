@@ -1,5 +1,6 @@
 const authRoutes = require('@routes/auth.route');
 const profileRoutes = require('@routes/profile.route');
+const inventoryRoutes = require('@routes/inventory.route');
 
 /**
  * We will just map the routes resource with their respective
@@ -9,4 +10,5 @@ const profileRoutes = require('@routes/profile.route');
 module.exports = {
   auth: authRoutes,
   profile: profileRoutes,
+  inventory: inventoryRoutes,
 };

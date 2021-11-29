@@ -25,6 +25,7 @@
           ["@models", "./src/models"],
           ["@requests", "./src/requests"],
           ["@middlewares", "./src/middlewares"],
+          ["@resources", "./src/resources"],
           ["@configs", "./src/configs"],
           ["@controllers", "./src/controllers"],
           ["@services", "./src/services"],

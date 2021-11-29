@@ -1,4 +1,4 @@
-const registerValidator = require('@requests/validators/user');
+const registerValidator = require('@requests/user.validator');
 const Hash = require('@utils/hash');
 const JWT = require('@utils/jwt');
 const routeWrapper = require('@utils/async');
