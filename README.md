@@ -22,3 +22,12 @@ This is a NodeJS application meant to serve as a REST API for a SAAS project, yo
 - [x] List items
 - [x] Find item
 - [x] Delete item
+
+### Deployment
+API URL: `https://db-expresso.herokuapp.com/`
+
+### Login credentials
+```
+Email: johndoe@gmail.com
+Password: password
+```
