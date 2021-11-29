@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "91a92154-dd37-45b5-bd3e-301b6819cb95",
+		"name": "Expresso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"johndoe@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}{{baseURL}}/auth/login",
+							"host": [
+								"{{endpoint}}{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Sign into the application (gives the user a JWT token to make subsequent auth requests)."
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"johndoee@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}{{baseURL}}/auth/register",
+							"host": [
+								"{{endpoint}}{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Create a new account."
+					},
+					"response": []
+				}
+			],
+			"description": "Authentication routes.\n"
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Create new Inventory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"HP Omen JP9032\",\n    \"quantity\": 43,\n    \"price\": 354982,\n    \"label\": \"Computer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}{{baseURL}}/inventory",
+							"host": [
+								"{{endpoint}}{{baseURL}}"
+							],
+							"path": [
+								"inventory"
+							]
+						},
+						"description": "Create a new inventory resource"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inventory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}{{baseURL}}/inventory",
+							"host": [
+								"{{endpoint}}{{baseURL}}"
+							],
+							"path": [
+								"inventory"
+							]
+						},
+						"description": "Get all inventory resource"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inventory by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}{{baseURL}}/inventory/61a53194aa1701dd8b7594e0",
+							"host": [
+								"{{endpoint}}{{baseURL}}"
+							],
+							"path": [
+								"inventory",
+								"61a53194aa1701dd8b7594e0"
+							]
+						},
+						"description": "Get an Inventory resource by its ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Update an Inventory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Oriamo Airpod\",\n    \"description\": \"High quality sound to enjoy music at your leisure.\",\n    \"price\": 34550\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}{{baseURL}}/inventory/61a53194aa1701dd8b7594e0",
+							"host": [
+								"{{endpoint}}{{baseURL}}"
+							],
+							"path": [
+								"inventory",
+								"61a53194aa1701dd8b7594e0"
+							]
+						},
+						"description": "Update an Inventory resource"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Inventory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}{{baseURL}}/inventory/61a532a0797024aec2c0b45f",
+							"host": [
+								"{{endpoint}}{{baseURL}}"
+							],
+							"path": [
+								"inventory",
+								"61a532a0797024aec2c0b45f"
+							]
+						},
+						"description": "Delete an Inventory resource by its ID."
+					},
+					"response": []
+				}
+			],
+			"description": "Inventory routes"
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Get profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}{{baseURL}}/profile",
+							"host": [
+								"{{endpoint}}{{baseURL}}"
+							],
+							"path": [
+								"profile"
+							]
+						},
+						"description": "Get the information of the signed in user (with token)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}{{baseURL}}/",
+					"host": [
+						"{{endpoint}}{{baseURL}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Check the API status"
+			},
+			"response": []
+		}
+	]
+}
