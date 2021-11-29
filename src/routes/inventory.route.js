@@ -6,6 +6,10 @@ const {
   update,
   remove,
 } = require('@controllers/inventory.controller');
+const authMiddleware = require('@middlewares/auth.middleware');
+
+// Ensure that the user is authenticated before making any request
+router.use(authMiddleware);
 
 router.get('/', get);
 

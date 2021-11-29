@@ -41,7 +41,11 @@ const create = routeWrapper(async (req, res) => {
   const data = req.body;
 
   // fetch inventory
-  const inventory = await dbService.addInventory(data);
+  const inventory = await dbService.addInventory({
+    ...data,
+    addedBy: req.user.id,
+  });
+
   if (!inventory)
     return res.status(400).json({ message: 'Inventory not created' });
 
